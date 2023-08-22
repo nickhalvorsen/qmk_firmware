@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,    KC_Q,   KC_W,   KC_F,   KC_P,   KC_G,                                         KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC,
       KC_LSFT,   KC_A,   KC_R,   KC_S,   KC_T,   KC_D,                                         KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
       KC_LCTL,   KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,  LT(_FKEYS, KC_ESC),   LT(_FKEYS, KC_ESC), KC_ENT, KC_LSFT, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_LSFT,
-              _______, KC_LGUI, KC_LALT, MO(_NUM), MO(_LOWER), MO(_NAV), KC_SPC, MO(_NUM),  KC_BSPC, _______
+              C(KC_F4), KC_LGUI, KC_LALT, MO(_NUM), MO(_LOWER), MO(_NAV), KC_SPC, MO(_NUM),  KC_BSPC, _______
     ),
 /*
  * Lower Layer: Symbols
