@@ -229,20 +229,24 @@ void oled_task_user(void) {
 
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {
+    // for some reason, on my keyboard this is necessary
+    clockwise = !clockwise;
+
     if (index == 0) {
+        // Page up/Page down
+        if (clockwise) {
+            tap_code16(LCTL(KC_TAB));
+        } else {
+            // need to use "tap_code16" instead of "tap_code" when applying modifiers
+            tap_code16(LCTL(S(KC_TAB)));
+        }
+    }
+    else if (index == 1) {
         // Volume control
         if (clockwise) {
             tap_code(KC_VOLU);
         } else {
             tap_code(KC_VOLD);
-        }
-    }
-    else if (index == 1) {
-        // Page up/Page down
-        if (clockwise) {
-            tap_code(KC_PGDN);
-        } else {
-            tap_code(KC_PGUP);
         }
     }
     // override the keyboard-level encoder function
