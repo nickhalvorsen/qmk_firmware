@@ -235,10 +235,10 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         // Page up/Page down
         if (clockwise) {
-            tap_code16(LCTL(KC_TAB));
+            tap_code16(C(KC_TAB));
         } else {
             // need to use "tap_code16" instead of "tap_code" when applying modifiers
-            tap_code16(LCTL(S(KC_TAB)));
+            tap_code16(S(C(KC_TAB)));
         }
     }
     else if (index == 1) {
