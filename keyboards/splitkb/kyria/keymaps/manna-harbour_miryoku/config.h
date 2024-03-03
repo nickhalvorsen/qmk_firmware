@@ -18,7 +18,7 @@ LAYOUT( \
 XXX, K00, K01, K02, K03, K04,                          K05, K06, K07, K08, K09, XXX, \
 XXX, K10, K11, K12, K13, K14,                          K15, K16, K17, K18, K19, XXX, \
 XXX, K20, K21, K22, K23, K24, XXX, XXX,      XXX, XXX, K25, K26, K27, K28, K29, XXX, \
-               XXX, XXX, K32, K33, K34,      K35, K36, K37, XXX, XXX \
+               C(KC_F4), XXX, K32, K33, K34,      K35, K36, K37, XXX, XXX \
 )
 #else
 #define LAYOUT_miryoku( \
@@ -31,6 +31,23 @@ LAYOUT( \
 XXX, K00, K01, K02, K03, K04,                          K05, K06, K07, K08, K09, XXX, \
 XXX, K10, K11, K12, K13, K14,                          K15, K16, K17, K18, K19, XXX, \
 XXX, K20, K21, K22, K23, K24, XXX, XXX,      XXX, XXX, K25, K26, K27, K28, K29, XXX, \
-               XXX, K32, K33, K34, XXX,      XXX, K35, K36, K37, XXX \
+               C(KC_F4), K32, K33, K34, XXX,      XXX, K35, K36, K37, XXX \
 )
 #endif
+
+
+
+// Nick added
+#ifdef RGBLIGHT_ENABLE
+  #define RGBLIGHT_ANIMATIONS
+  #define RGBLIGHT_HUE_STEP 8
+  #define RGBLIGHT_SAT_STEP 8
+  #define RGBLIGHT_VAL_STEP 8
+  //#define RGBLIGHT_LIMIT_VAL 150
+#endif
+
+// default is 
+#undef TAPPING_TERM
+#define TAPPING_TERM 200
+//#define PERMISSIVE_HOLD 
+#define BILATERAL_COMBINATIONS 300
